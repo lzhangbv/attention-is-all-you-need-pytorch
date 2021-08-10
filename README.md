@@ -32,7 +32,8 @@ An example of training for the WMT'16 Multimodal Translation task (http://www.st
 
 ### 0) Download the spacy language model.
 ```bash
-# conda install -c conda-forge spacy 
+# pip install dill==0.3.3
+# pip install spacy==2.3.5
 python -m spacy download en
 python -m spacy download de
 ```
@@ -44,7 +45,7 @@ python preprocess.py -lang_src de -lang_trg en -share_vocab -save_data m30k_deen
 
 ### 2) Train the model
 ```bash
-python train.py -data_pkl m30k_deen_shr.pkl -log m30k_deen_shr -embs_share_weight -proj_share_weight -label_smoothing -output_dir output -b 256 -warmup 128000 -epoch 400
+python train.py -data_pkl m30k_deen_shr.pkl -embs_share_weight -proj_share_weight -label_smoothing -output_dir output -b 256 -warmup 128000 -epoch 400
 ```
 
 ### 3) Test the model
