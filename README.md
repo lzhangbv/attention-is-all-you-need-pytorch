@@ -34,7 +34,7 @@ An example of training for the WMT'16 Multimodal Translation task (http://www.st
 ```bash
 # pip install dill==0.3.3
 # pip install spacy==2.3.5
-# pip install torchtext 0.6.0
+# pip install torchtext==0.6.0
 python -m spacy download en
 python -m spacy download de
 ```
